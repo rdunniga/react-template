@@ -51,7 +51,9 @@ export const SidebarData = [
   { title: "AD User", path: "/aduser", icon: <TbIcons.TbUser />, cName: "sidebar-text", },
 
   { title: "WMPlus Personnal", path: "/wmppersonnalinfo", icon: null, cName: "sidebar-text", },
-  
+
+  { title: "Fetch - Custom Hook", path: "/fetchhook", icon: null, cName: "sidebar-text", },
+
   { title: "Home", path: "/", icon: <AiIcons.AiFillHome />, cName: "sidebar-text", },
   { title: "Login", path: "login", icon: <AiIcons.AiFillHome />, cName: "sidebar-text", },
 ]

@@ -1,5 +1,5 @@
 import React from 'react';
-import AdUser from '../components/AD/AdUser';
+import AdUser from '../components/Template/AD/AdUser';
 
 const AdUserPage = () => {
   return (

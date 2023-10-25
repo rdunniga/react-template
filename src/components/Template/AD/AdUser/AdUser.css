@@ -1,0 +1,8 @@
+.detail-container {
+  overflow-y: auto;
+  height: 350px;
+}
+
+.title {
+  text-align: center
+}

@@ -6,10 +6,10 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Table from 'react-bootstrap/Table';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import useFetch from '../../../hooks/useFetch';
-import { apiEndPointAdUser, httpResponseStatusCode } from '../../../utils/apiEndpoint';
+import useFetch from '../../../../hooks/useFetch';
+import { apiEndPointAdUser, httpResponseStatusCode } from '../../../../utils/apiEndpoint';
 import './AdUser.css';
-import GlobalSpinner from '../../Global/Spinner';
+import GlobalSpinner from '../../../Global/Spinner';
 // await new Promise((resolve) => setTimeout(resolve, 1000));
 
 function AdUser() {

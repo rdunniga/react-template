@@ -14,6 +14,7 @@ import About from "./routes/About";
 import AdSearchPage from "./routes/AdSearchPage";
 import AdUserPage from "./routes/AdUserPage";
 import Contact from "./routes/Contact";
+import CustomFetchHookPage from "./routes/CustomFetchHookPage";
 import Login from "./routes/Login";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar/Sidebar";
@@ -45,6 +46,7 @@ const router = createBrowserRouter(
       <Route path="aduser" element={<AdUserPage />} />
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact />} />
+      <Route path="fetchhook" element={<CustomFetchHookPage />} />
       <Route path="login" element={<Login />} />
       <Route path="usercontext" element={<UserContextDumpPage />} />
       <Route path="wmppersonnalinfo" element={<WmpPersonnelInfoPage />} />

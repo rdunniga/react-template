@@ -32,7 +32,7 @@ const FetchHook = ({
     <Card size="sm">
       <Card.Body>
         <Card.Title>Endpoint -- {fetchUrl}</Card.Title>
-        <Card.Text style={{ color: fetchLoading ? "#ff0000" : "#00b000"}}>fetch -- {fetchLoading ? "active": "inactive"}</Card.Text>
+        <Card.Text style={{ color: fetchLoading ? "#ff0000" : "#00b000"}}>fetch -- {fetchLoading ? "active": "complete"}</Card.Text>
         <Card.Text>fetch status {fetchStatus}</Card.Text>
         <Card.Text>record count {fetchReceived?.length}</Card.Text>
         <Card.Text>fetch error {fetchError}</Card.Text>

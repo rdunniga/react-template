@@ -108,7 +108,7 @@ function useFetch({
     if (! fetchGetAllPages) { return; }
     if (fetchHeader) {
       if (fetchHeader.CurrentPage < fetchHeader.TotalPages) {
-        console.log('here');
+        //console.log('here');
         url = fetchUrl.concat(fetchUrl.includes('?') ? '&' : '?', `PageNumber=${fetchHeader.CurrentPage + 1}`);
         fetchRequest(url);
         //setFetchUrl(url);

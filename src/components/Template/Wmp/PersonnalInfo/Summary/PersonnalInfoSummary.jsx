@@ -16,15 +16,15 @@ function PersonnalInfoSummary(prop) {
 
   const hasRecords = records && records?.length > 0;
 
-  useEffect(()=> {
+  useEffect(() => {
     if (location.state) {
-      const {records, scrollPosition} = location.state;
+      const { records, scrollPosition } = location.state;
       setRecords(records);
       setTimeout(() => {
         scrollRef.current.scrollTop = scrollPosition
       }, (10));
     }
-  },[]);
+  }, []);
 
   useEffect(() => {
     setRecords(prop.records);

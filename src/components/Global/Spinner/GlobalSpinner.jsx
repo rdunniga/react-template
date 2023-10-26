@@ -13,23 +13,8 @@ function GlobalSpinner(prop) {
           role="status"
           aria-hidden="true"
         />
-        {/* {prop?.msg ? prop.msg : " Loading..."} */}
         <span>{prop?.msg ? prop.msg : "Loading..."}</span>
       </Button>
-      {/* {' '} */}
-      {/* <Button variant="primary" disabled>
-        <Spinner
-          as="span"
-          animation="grow"
-          size="sm"
-          role="status"
-          aria-hidden="true"
-        />
-        {prop?.msg ? prop.msg : "Loading..."}
-      </Button>
-      <Spinner animation="border" role="status">
-        <span className="visually-hidden">Loading...</span>
-      </Spinner> */}
     </>
   )
 }

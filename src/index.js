@@ -15,11 +15,12 @@ import AdSearchPage from "./routes/AdSearchPage";
 import AdUserPage from "./routes/AdUserPage";
 import Contact from "./routes/Contact";
 import CustomFetchHookPage from "./routes/CustomFetchHookPage";
-import Login from "./routes/Login";
+import LoginPage from "./routes/LoginPage";
+import LoginStatus from "./components/Global/LoginStatus";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar/Sidebar";
 import ErrorPage from "./routes/ErrorPage";
-import UserContextDumpPage from "./routes/UserContextDumpPage";
+import UserContextDisplayPage from "./routes/UserContextDisplayPage";
 import WmpPersonnelInfoDetailPage from "./routes/WmpPersonnelInfoDetailPage";
 import WmpPersonnelInfoPage from "./routes/WmpPersonnelInfoPage";
 import "./App.css";
@@ -31,6 +32,7 @@ const AppLayout = () => {
       <UserContextProvider>
         <Navbar />
         <Sidebar />
+        <LoginStatus />
         <Outlet />
       </UserContextProvider>
     </>
@@ -47,8 +49,8 @@ const router = createBrowserRouter(
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact />} />
       <Route path="fetchhook" element={<CustomFetchHookPage />} />
-      <Route path="login" element={<Login />} />
-      <Route path="usercontext" element={<UserContextDumpPage />} />
+      <Route path="login" element={<LoginPage />} />
+      <Route path="usercontextdisplay" element={<UserContextDisplayPage />} />
       <Route path="wmppersonnalinfo" element={<WmpPersonnelInfoPage />} />
       <Route path="wmppersonnalinfo/:id" element={<WmpPersonnelInfoDetailPage />} />
     </Route>

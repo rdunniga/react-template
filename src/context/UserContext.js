@@ -36,13 +36,18 @@ const UserContextProvider = (props) => {
   const [ userContext, setUserContext ] = useState(userDefault);
 
   useEffect(() => {
-    console.log('user context', userContext);
+    //console.log('user context', userContext);
   });
+
+  const Logout = () => {
+    setUserContext(userDefault);
+  };
 
   return (
     <UserContext.Provider value={{
       userId, setUserId,
       userContext, setUserContext,
+      Logout,
     }}>
       { props.children }
     </UserContext.Provider> 

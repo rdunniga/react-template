@@ -1,12 +1,8 @@
 import React, { useContext, useEffect } from 'react';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
-
 import useFetch from '../../../hooks/useFetch';
 import { UserContext } from '../../../context/UserContext';
-import { apiEndPointReds, httpResponseStatusCode } from '../../../utils/apiEndpoint';
-
 import './FetchHook.css';
 
 const FetchHook = ({
@@ -23,7 +19,7 @@ const FetchHook = ({
   }, [fetchUrl]);
 
   useEffect(() => {
-    console.log('FetchHook', fetchReceived?.length, fetchHeader, fetchLoading, fetchError);
+    //console.log('FetchHook', fetchReceived?.length, fetchHeader, fetchLoading, fetchError);
     //console.log('Example fetchHeader', fetchHeader);
   }, [ fetchReceived, fetchHeader, fetchLoading, fetchError ]);
 

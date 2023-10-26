@@ -6,11 +6,8 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import useFetch from '../../../../../hooks/useFetch';
-import { apiEndPointWmpPersonnalInfo, httpResponseStatusCode } from '../../../../../utils/apiEndpoint';
+import { apiEndPointWmpPersonnalInfo } from '../../../../../utils/apiEndpoint';
 import './PersonnalInfoDetail.css';
-import FetchButton from '../../../../ui/button/fetch';
-import GlobalSpinner from '../../../../Global/Spinner';
-import PersonnalInfoSummary from '../Summary';
 
 function PersonnalInfoDetail() {
   const { id } = useParams();
@@ -25,7 +22,6 @@ function PersonnalInfoDetail() {
   }, []);
 
   useEffect(() => {
-    //console.log('onUseEffect', fetchReceived);
   }, [fetchRequest, fetchRefresh, fetchReceived, fetchHeader, fetchLoading, fetchError]);
 
   if (fetchLoading === true) { return (<div>Loading...</div>) }

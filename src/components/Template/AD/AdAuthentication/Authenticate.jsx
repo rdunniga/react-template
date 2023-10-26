@@ -1,46 +1,49 @@
 import React, { useContext, useEffect, useState } from 'react';
-//import { Link, Navigate, useNavigate } from 'react-router-dom';
-import useFetch from '../../hooks/useFetch';
-import { UserContext } from '../../context/UserContext';
+import useFetch from '../../../../hooks/useFetch';
+import { UserContext } from '../../../../context/UserContext';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { apiEndPointAuthenticate, httpResponseStatusCode } from '../../utils/apiEndpoint';
+import { apiEndPointAuthenticate, httpResponseStatusCode } from '../../../../utils/apiEndpoint';
 
 const Authenticate = ({ }) => {
   const { fetchRequest, fetchRequestBody, fetchReceived, fetchHeader, fetchLoading, fetchError, fetchStatus, fetchUrl
-  } = useFetch({url: apiEndPointAuthenticate, method: "POST" });
+  } = useFetch({ url: apiEndPointAuthenticate, method: "POST" });
   const { userContext, setUserContext } = useContext(UserContext);
 
   useEffect(() => {
-    console.log('userContext', userContext);
   }, [userContext]);
 
   useEffect(() => {
-    //console.log('Example userId', userId);
-    //console.log('Example', dataFetched, fetchHeader, fetchLoading, fetchError);
-    console.log('fetch', fetchLoading, fetchHeader, fetchReceived, fetchError);
     if (fetchLoading) { return; }
     if (fetchError) {
       if (fetchError === httpResponseStatusCode.unauthorized) {
-        alert("not authorized");
         return;
       }
     }
     setUserContext(fetchReceived);
-  }, [ fetchReceived, fetchHeader, fetchLoading, fetchError ]);
+    setUsername('');
+    setPassword('');
+    setTokenExpiresAfter('');
+  }, [fetchReceived, fetchHeader, fetchLoading, fetchError]);
+
+  useEffect(() => {
+
+  }, [fetchError]);
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [tokenExpiresAfter, setTokenExpiresAfter] = useState('');
 
   const onAuthenticate = (e) => {
-    e.preventDefault();
-    if ((! username) || (! password)) { return;}
-    console.log('onAuthenticate', username, password, e);
-    fetchRequestBody({body: {username, password}});
+    if (username && password) {
+      e.preventDefault();
+      if ((!username) || (!password)) { return; }
+      fetchRequestBody({ body: { username, password, tokenExpiresAfter } });
+    }
   };
 
   const onHandleChange = (e) => {
@@ -110,9 +113,21 @@ const Authenticate = ({ }) => {
                 <Form.Control type="password" value={password} placeholder="password" required onChange={(e) => setPassword(e.target.value)} />
               </Form.Group>
             </Col>
+            <Col md>
+              <Form.Group controlId="tokenExpiresAfter4">
+                <Form.Label>Token Expires After</Form.Label>
+                <Form.Control type="number" value={tokenExpiresAfter} placeholder="604800" onChange={(e) => setTokenExpiresAfter(e.target.value)} />
+              </Form.Group>
+            </Col>
           </Row>
-          <Button variant="primary" type="submit" onClick={(e) =>onAuthenticate(e)}>Submit</Button>
+          <Button className="mt-3" variant="primary" type="submit" disabled={fetchLoading} onClick={(e) => onAuthenticate(e)}>Submit</Button>
         </Form>
+        {
+          fetchError && fetchStatus &&
+          <Container className="mt-3">
+            {fetchStatus === httpResponseStatusCode.unauthorized ? "Not Authorized" : fetchStatus}
+          </Container>
+        }
       </Container>
     </>
   );

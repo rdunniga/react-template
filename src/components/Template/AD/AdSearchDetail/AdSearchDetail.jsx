@@ -3,7 +3,6 @@ import Container from 'react-bootstrap/Container';
 import Table from 'react-bootstrap/Table';
 import { httpResponseStatusCode } from '../../../../utils/apiEndpoint';
 import './AdSearchDetail.css';
-import GlobalSpinner from '../../../Global/Spinner';
 
 function AdSearchDetail(prop) {
   const fetchError = prop?.fetchError;

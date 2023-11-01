@@ -1,7 +1,7 @@
 import {
   apiEndPointAdUser,
   apiEndPointAuthentication,
-  apiEndPointReds,
+  apiEndPointRedsAudits,
   apiEndPointRmsTiburonSsctab,
   getApiServer,
   httpResponseStatusCode,
@@ -10,7 +10,7 @@ import {
 export {
   apiEndPointAdUser,
   apiEndPointAuthentication,
-  apiEndPointReds,
+  apiEndPointRedsAudits,
   apiEndPointRmsTiburonSsctab,
   getApiServer,
   httpResponseStatusCode,

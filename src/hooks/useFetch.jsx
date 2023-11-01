@@ -73,7 +73,7 @@ function useFetch({
         .catch((e) => {
           console.log('e', e);
           setFetchError(e);
-          //throw e;
+          throw e;
         });
     } catch (e) {
       //setFetchError(e);

@@ -1,0 +1,38 @@
+.card {
+  width: 18rem;
+  padding: 0px;
+}
+
+.card-title {
+  font-size: medium;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+img.card-img-top {
+  padding: 0px;
+  /* width: 60%;
+  height: 50%; */
+  /* flex: 1;
+  resize: con */
+}
+
+p.card-text {
+  padding: 0px;
+  margin: 3px;
+  font-size: smaller;
+}
+
+span.card__text {
+  /* border: 1px solid #ff0000; */
+  display: inline-block;
+  width: 60px;
+  margin: 5px, 2px;
+  padding: 1px;
+}
+
+.btn-link {
+  text-decoration: none;
+}

@@ -10,6 +10,8 @@ export const apiEndPointAdSearch = `${getApiServer()}/api/ad/search`;
 export const apiEndPointAdUser = `${getApiServer()}/api/ad/user`;
 export const apiEndPointAuthenticate = `${getApiServer()}/api/ad/authenticate`;
 export const apiEndPointReds = `${getApiServer()}/api/reds/audits`;
+export const apiEndPointCalidBookings = `${getApiServer()}/api/calid/bookings`;
+export const apiEndPointCalidBookingPhotos = `${getApiServer()}/api/calid/bookingphotos`;
 export const apiEndPointRmsTiburonSsctab = `${getApiServer()}/api/RmsTiburon/ssctab`;
 export const apiEndPointWmpPersonnalInfo = `${getApiServer()}/api/wmpluspersonnelinfo`;
 

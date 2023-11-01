@@ -49,6 +49,7 @@ export const SidebarData = [
   // { title: "AD Search", path: "/adsearch", icon: <TbIcons.TbUsers />, cName: "sidebar-text", },
   // { title: "AD Search", path: "/adsearch", icon: <TbIcons.TbUsers />, cName: "sidebar-text", },
   { title: "AD User", path: "/aduser", icon: <TbIcons.TbUser />, cName: "sidebar-text", },
+  { title: "CAL-ID Booking", path: "/calid/booking", icon: <TbIcons.TbUser />, cName: "sidebar-text", },
   { title: "Custom Fetch Hook", path: "/fetchhook", icon: null, cName: "sidebar-text", },
 
   { title: "User Context Display", path: "/usercontextdisplay", icon: null, cName: "sidebar-text", },

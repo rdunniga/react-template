@@ -13,6 +13,8 @@ import Home from "./routes/Home";
 import About from "./routes/About";
 import AdSearchPage from "./routes/AdSearchPage";
 import AdUserPage from "./routes/AdUserPage";
+import CalIdBookingPage from "./routes/CalIdBookingPage";
+import CalIdBookingPhotoPage from "./routes/CalIdBookingPhotoPage";
 import Contact from "./routes/Contact";
 import CustomFetchHookPage from "./routes/CustomFetchHookPage";
 import LoginPage from "./routes/LoginPage";
@@ -47,6 +49,8 @@ const router = createBrowserRouter(
       <Route path="adsearch" element={<AdSearchPage />} />
       <Route path="aduser" element={<AdUserPage />} />
       <Route path="about" element={<About />} />
+      <Route path="calid/booking" element={<CalIdBookingPage />} />
+      <Route path="calid/bookingphoto" element={<CalIdBookingPhotoPage />} />
       <Route path="contact" element={<Contact />} />
       <Route path="fetchhook" element={<CustomFetchHookPage />} />
       <Route path="login" element={<LoginPage />} />

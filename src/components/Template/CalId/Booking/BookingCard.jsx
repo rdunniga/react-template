@@ -70,20 +70,22 @@ function BookingCard(props) {
     <Card className="me-3 mb-3">
       <Card.Img variant="top" alt="Booking Photo" src={imageUrl} />
       <Card.Body>
-        <Card.Title>Case# - {props?.record?.entry.agencY_CASE_NUM}</Card.Title>
+        {/* <Card.Title>Case# - {props?.record?.entry.agencY_CASE_NUM}</Card.Title> */}
+        <Card.Text><span className="card__text">Case#</span>{props?.record?.entry.agencY_CASE_NUM}</Card.Text>
         <Card.Text><span className="card__text">CAL-ID</span>{props?.record?.entry.caliD_NUM}</Card.Text>
+        <Card.Text><span className="card__text">Bk Nbr</span>{props?.record?.entry.bookinG_NUM}</Card.Text>
         <Card.Text><span className="card__text">Bk Date</span>{formatDate(props?.record?.entry.bookinG_DATE)}</Card.Text>
         {
           props?.record?.frontBlobsMetadata?.length > 0 &&
-          <Button name={imageType.front} variant="link" onClick={((e) => onImageType(e))}>Front</Button>
+          <Button className="image" name={imageType.front} variant="link" onClick={((e) => onImageType(e))}>Front</Button>
         }
         {
           props?.record?.sideBlobsMetadata?.length > 0 &&
-          <Button name={imageType.side} variant="link" onClick={((e) => onImageType(e))}>Side</Button>
+          <Button className="image" name={imageType.side} variant="link" onClick={((e) => onImageType(e))}>Side</Button>
         }
         {
           smts.length > 0 &&
-          <Button name={imageType.smt} variant="link" onClick={((e) => onImageType(e))}>
+          <Button className="image" name={imageType.smt} variant="link" onClick={((e) => onImageType(e))}>
             SMT - {smtOffset + 1} of {smts.length}</Button>
         }
       </Card.Body>

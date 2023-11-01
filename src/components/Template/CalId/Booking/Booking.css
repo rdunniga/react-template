@@ -1,38 +1,45 @@
 .card {
-  width: 18rem;
+  /* border: 1px solid #00ff22; */
+  width: 160px;
   padding: 0px;
 }
 
 .card-title {
-  font-size: medium;
+  font-size: small;
 }
 
 .card-body {
-  padding: 10px;
+  /* border: 1px solid #1900ff; */
+  padding: 5px;
 }
 
 img.card-img-top {
   padding: 0px;
-  /* width: 60%;
-  height: 50%; */
+  width: 60%;
+  height: 50%;
   /* flex: 1;
   resize: con */
 }
 
 p.card-text {
+  /* border: 1px solid #00ff22; */
   padding: 0px;
-  margin: 3px;
-  font-size: smaller;
+  margin: 0px;
+  font-size: 0.7rem;
 }
 
 span.card__text {
   /* border: 1px solid #ff0000; */
   display: inline-block;
   width: 60px;
-  margin: 5px, 2px;
-  padding: 1px;
+  margin: 0px, 2px;
+  padding: 0px;
 }
 
 .btn-link {
+  /* border: 1px solid #ff0000; */
   text-decoration: none;
+  padding: 0px 0px 0px 0px;
+  margin: 3px;
+  font-size: 0.7rem;
 }

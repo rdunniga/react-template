@@ -43,6 +43,10 @@ function Booking() {
           alert('date range cannot exceet 1 day');
           return;
         }
+        if (daysBetween < 0) {
+          alert('date range is not valid');
+          return;
+        }
         params = `?minBookingDt=${startDate}&maxBookingDt=${endDate}&orderBy=booking_date`;
       } else {
         params = `?filter=${filter}`;
@@ -108,7 +112,7 @@ function Booking() {
         </Form>
       </Container>
       <Container className="detailx-container mt-5 mb-5">
-        {fetchLoading && <h4>fetching...</h4>}
+        {/* {fetchLoading && <h4>fetching...</h4>} */}
         {fetchError &&
           <h4>fetch status: {fetchError === httpResponseStatusCode.notFound ? 'not found' : fetchError}</h4>
         }

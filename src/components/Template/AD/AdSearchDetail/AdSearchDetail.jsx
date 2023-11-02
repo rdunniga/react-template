@@ -9,7 +9,7 @@ function AdSearchDetail(prop) {
   const fetchLoading = prop?.fetchLoading;
   const fetchReceived = prop?.fetchReceived;
 
-  console.log('AdSearchDetail prop', prop);
+  //console.log('AdSearchDetail prop', prop);
   return (
     <Container className="detail-container mt-5 mb-5">
       {fetchLoading && <h4>{prop?.fetchMessage}</h4>}

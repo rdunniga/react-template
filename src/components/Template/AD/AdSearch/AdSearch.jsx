@@ -56,13 +56,13 @@ function AdSearch() {
       return a += '&propertiesToLoad[' + index++ + ']=' + v;
     }, '');
     const url = `${apiEndPointAdSearch}/?filter=${filter}&path=${path}&scope=${scope}${properties}`;
-    console.log('properties', properties);
-    console.log('url', url);
+    // console.log('properties', properties);
+    // console.log('url', url);
     fetchRequest(url);
   };
 
   useEffect(() => {
-     console.log('onUseEffect', fetchReceived);
+    //  console.log('onUseEffect', fetchReceived);
   }, [fetchRequest, fetchRefresh, fetchReceived, fetchHeader, fetchLoading, fetchError]);
 
   return (

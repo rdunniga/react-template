@@ -10,7 +10,7 @@ function CustomFetchPage() {
   return (
     <>
       <h2 className='title'>Custom Fetch Hook</h2>
-      <Container>
+      <Container className="container__page">
         <Row>
         <FetchHook url={apiEndPointRmsTiburonSsctab + '/n*'} />
         </Row>

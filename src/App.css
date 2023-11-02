@@ -7,6 +7,10 @@
   font-family: "Open Sans", sans-serif;
 }
 
+.container__page {
+  padding-left: 150px;
+}
+
 .home,
 .about,
 .contact {

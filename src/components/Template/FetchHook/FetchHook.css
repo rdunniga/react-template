@@ -3,18 +3,19 @@
   height: 350px;
 }
 
-.card {
-  width: 100%;
-}
-
-.card-title {
-  font-size: 1.3rem;
-}
-
-p.card-text {
-  font-size: 1.1rem;
-}
-
 .title {
   text-align: center
 }
+
+.card__fetchhook {
+  width: 100%;
+}
+
+.card-title__fetchhook {
+  font-size: 1.3rem;
+}
+
+p.card-text__fetchhook {
+  font-size: 1.1rem;
+}
+

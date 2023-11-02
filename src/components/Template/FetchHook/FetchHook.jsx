@@ -23,14 +23,14 @@ const FetchHook = ({
   }, [ fetchReceived, fetchHeader, fetchLoading, fetchError ]);
 
   return (
-    <Container className="mb-2">
-    <Card>
-      <Card.Body>
-        <Card.Title>Endpoint -- {fetchUrl}</Card.Title>
-        <Card.Text style={{ color: fetchLoading ? "#ff0000" : "#00b000"}}>fetch -- {fetchLoading ? "active": "complete"}</Card.Text>
-        <Card.Text>fetch status {fetchStatus}</Card.Text>
-        <Card.Text>record count {fetchReceived?.length}</Card.Text>
-        <Card.Text>fetch error {fetchError}</Card.Text>
+    <Container className="mb-2 container__fetchhook">
+    <Card className="card__fetchhook">
+      <Card.Body className="card-body__fetchhook">
+        <Card.Title className="card-title__fetchhook">Endpoint -- {fetchUrl}</Card.Title>
+        <Card.Text className="card-text__fetchhook" style={{ color: fetchLoading ? "#ff0000" : "#00b000"}}>fetch -- {fetchLoading ? "active": "complete"}</Card.Text>
+        <Card.Text className="card-text__fetchhook">fetch status {fetchStatus}</Card.Text>
+        <Card.Text className="card-text__fetchhook">record count {fetchReceived?.length}</Card.Text>
+        <Card.Text className="card-text__fetchhook">fetch error {fetchError}</Card.Text>
       </Card.Body>
     </Card>
     </Container>

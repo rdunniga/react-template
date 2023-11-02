@@ -31,13 +31,13 @@ function LoginTokenPage() {
         <h2 className='title'>JWT Example</h2>
         <Row className="mb-4">
           {
-            userContext.token
+            userContext?.token
               ? <Link onClick={() => Logout()}>Logout</Link>
               : <Link to="/login">Login</Link>
           }
         </Row>
         <Row>
-          <textarea style={{ padding: "5px" }} type="textarea" rows={3} cols={80} disabled placeholder="login to obtain a token" value={userContext.token} readOnly />
+          <textarea style={{ padding: "5px" }} type="textarea" rows={3} cols={80} disabled placeholder="login to obtain a token" value={userContext?.token} readOnly />
         </Row>
         <Row className="mt-4">
           <Button size="sm" className="mb-3" onClick={(() => onClick())}>Get Sera Role Group Count</Button>

@@ -80,7 +80,7 @@ function Booking() {
   return (
     <>
       <Container className="search-container mt-5 mb-5">
-        <h2 className='title'>Cal ID Booking Metadata</h2>
+        <h2 className='title'>Cal ID Booking Metadata and Photos</h2>
         <Form>
           <Row>
             <Col md>

@@ -20,12 +20,11 @@ const FetchHook = ({
 
   useEffect(() => {
     //console.log('FetchHook', fetchReceived?.length, fetchHeader, fetchLoading, fetchError);
-    //console.log('Example fetchHeader', fetchHeader);
   }, [ fetchReceived, fetchHeader, fetchLoading, fetchError ]);
 
   return (
-    <Container size="lg" className="mb-2">
-    <Card size="sm">
+    <Container className="mb-2">
+    <Card>
       <Card.Body>
         <Card.Title>Endpoint -- {fetchUrl}</Card.Title>
         <Card.Text style={{ color: fetchLoading ? "#ff0000" : "#00b000"}}>fetch -- {fetchLoading ? "active": "complete"}</Card.Text>

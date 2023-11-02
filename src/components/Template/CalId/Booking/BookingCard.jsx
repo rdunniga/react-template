@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { apiEndPointCalidBookingPhotos } from '../../../../utils/apiEndpoint';
-import NoPhoto from '../../../../assets/images/NoPhotoAvailable.jpg';
+import NoPhoto from '../../../../assets/images/NoPhotoAvailable.png';
 
 function BookingCard(props) {
   const imageType = {

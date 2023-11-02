@@ -13,7 +13,7 @@ function LoginTokenPage() {
   } = useFetch({
     url: apiEndPointSeraRoleGroups,
     getAllPages: false,
-    headers: { 'Authorization': `Bearer ${userContext.token}` }
+    headers: { 'Authorization': `Bearer ${userContext?.token}` }
   });
 
   const onClick = () => {

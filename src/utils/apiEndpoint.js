@@ -13,6 +13,7 @@ export const apiEndPointCalidBookings = `${getApiServer()}/api/calid/bookings`;
 export const apiEndPointCalidBookingPhotos = `${getApiServer()}/api/calid/bookingphotos`;
 export const apiEndPointRedsAudits = `${getApiServer()}/api/reds/audits`;
 export const apiEndPointRmsTiburonSsctab = `${getApiServer()}/api/RmsTiburon/ssctab`;
+export const apiEndPointSeraRoleGroups = `${getApiServer()}/api/sera/rolegroups`;
 export const apiEndPointWmpPersonnalInfo = `${getApiServer()}/api/wmplus/personnelinfo`;
 
 export const httpResponseStatusCode = {

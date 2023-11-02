@@ -58,4 +58,5 @@ export const SidebarData = [
 
   { title: "Home", path: "/", icon: <AiIcons.AiFillHome />, cName: "sidebar-text", },
   { title: "Login", path: "login", icon: <AiIcons.AiFillHome />, cName: "sidebar-text", },
+  { title: "Login Token Example", path: "logintoken", icon: <AiIcons.AiFillHome />, cName: "sidebar-text", },
 ]

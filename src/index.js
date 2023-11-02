@@ -19,6 +19,7 @@ import Contact from "./routes/Contact";
 import CustomFetchHookPage from "./routes/CustomFetchHookPage";
 import LoginPage from "./routes/LoginPage";
 import LoginStatus from "./components/Global/LoginStatus";
+import LoginTokenPage from "./routes/LoginTokenPage";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar/Sidebar";
 import ErrorPage from "./routes/ErrorPage";
@@ -41,39 +42,47 @@ const AppLayout = () => {
   )
 };
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    // <Route errorElement={<ErrorPage />}></Route>
-    <Route element={<AppLayout />}>
-      <Route path="/" element={<Home />} />
-      <Route path="adsearch" element={<AdSearchPage />} />
-      <Route path="aduser" element={<AdUserPage />} />
-      <Route path="about" element={<About />} />
-      <Route path="calid/booking" element={<CalIdBookingPage />} />
-      <Route path="calid/bookingphoto" element={<CalIdBookingPhotoPage />} />
-      <Route path="contact" element={<Contact />} />
-      <Route path="fetchhook" element={<CustomFetchHookPage />} />
-      <Route path="login" element={<LoginPage />} />
-      <Route path="usercontextdisplay" element={<UserContextDisplayPage />} />
-      <Route path="wmppersonnalinfo" element={<WmpPersonnelInfoPage />} />
-      <Route path="wmppersonnalinfo/:id" element={<WmpPersonnelInfoDetailPage />} />
-    </Route>
-  )
-);
+// const router = createBrowserRouter(
+//   createRoutesFromElements(
+//     // <Route errorElement={<ErrorPage />}></Route>
+//     <Route element={<AppLayout />}>
+//       <Route path="/" element={<Home />} />
+//       <Route path="adsearch" element={<AdSearchPage />} />
+//       <Route path="aduser" element={<AdUserPage />} />
+//       <Route path="about" element={<About />} />
+//       <Route path="calid/booking" element={<CalIdBookingPage />} />
+//       <Route path="calid/bookingphoto" element={<CalIdBookingPhotoPage />} />
+//       <Route path="contact" element={<Contact />} />
+//       <Route path="fetchhook" element={<CustomFetchHookPage />} />
+//       <Route path="login" element={<LoginPage />} />
+//       <Route path="usercontextdisplay" element={<UserContextDisplayPage />} />
+//       <Route path="wmppersonnalinfo" element={<WmpPersonnelInfoPage />} />
+//       <Route path="wmppersonnalinfo/:id" element={<WmpPersonnelInfoDetailPage />} />
+//     </Route>
+//   )
+// );
 
-// const router = createBrowserRouter([
-//   {
-//     element: <AppLayout />,
-//     errorElement: <ErrorPage />,
-//     children: [
-//       { path: "/", element: <Home />, },
-//       { path: "about", element: <About />, },
-//       { path: "contact", element: <Contact />, },
-//       { path: "login", element: <Login />, },
-//       { path: "usercontext", element: <UserContextDumpPage />, },
-//     ]
-//   }
-// ]);
+const router = createBrowserRouter([
+  {
+    element: <AppLayout />,
+    errorElement: <ErrorPage />,
+    children: [
+      { path: "/", element: <Home />, },
+      { path: "adsearch", element: <AdSearchPage />, },
+      { path: "aduser", element: <AdUserPage />, },
+      { path: "about", element: <About />, },
+      { path: "calid/booking", element: <CalIdBookingPage />, },
+      { path: "calid/bookingphoto", element: <CalIdBookingPhotoPage />, },
+      { path: "contact", element: <Contact />, },
+      { path: "fetchhook", element: <CustomFetchHookPage />, },
+      { path: "login", element: <LoginPage />, },
+      { path: "logintoken", element: <LoginTokenPage />, },
+      { path: "usercontextdisplay", element: <UserContextDisplayPage />, },
+      { path: "wmppersonnalinfo", element: <WmpPersonnelInfoPage />, },
+      { path: "wmppersonnalinfo/:id", element: <WmpPersonnelInfoDetailPage />, },
+    ]
+  }
+]);
 
 createRoot(document.getElementById("root")).render(
   <RouterProvider router={router} />

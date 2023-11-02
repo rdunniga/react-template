@@ -23,7 +23,7 @@ const Navbar = () => {
             <Link to="/" className="navbar-logo" image={star}>
               <img className="navbar-icon img-responsive mb-2" style={{ height: 50, width: 50 }} src={star} alt="logo" />
               {/* <GiRocketThruster className="navbar-icon" onClick={closeMobileMenu} /> */}
-              RsoApp Template
+              Rso Template App
             </Link>
             <div className="menu-icon" onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}

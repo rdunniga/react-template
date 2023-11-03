@@ -1,8 +1,8 @@
 export const getApiServer = () => {
   //return 'https://rsoapi.riversidesheriff.org';
   //return 'https://rsoapi-demo.riversidesheriff.org';
-  return 'https://rsoapi-dev.riversidesheriff.org';
-  //return 'https://rsoapi-test.riversidesheriff.org';
+  //return 'https://rsoapi-dev.riversidesheriff.org';
+  return 'https://rsoapi-test.riversidesheriff.org';
   //return 'https://localhost:44363';
 };
 

@@ -70,12 +70,16 @@ function Booking() {
         return;
       }
     }
-    //console.log('fetchReceived', fetchReceived);
+    console.log('fetchReceived', fetchReceived);
   }, [fetchReceived, fetchHeader, fetchLoading, fetchError]);
 
   useEffect(() => {
     //console.log('fetchError', fetchError);
   }, [fetchError]);
+
+  useEffect(() => {
+    console.log("render");
+  });
 
   return (
     <>
@@ -119,10 +123,10 @@ function Booking() {
         {fetchReceived &&
            <Container className="row"> {
           fetchReceived.map((x, i) => {
-            //console.log('x.entry.bookinG_DATE', formatDate(x.entry.bookinG_DATE));
             const record = x;
             return (
               <BookingCard key={record.entry.recordId} record={record} />
+//              <BookingCard key={1 + (Math.random() * (100000000))} record={record} />
             );
           })
          } </Container>

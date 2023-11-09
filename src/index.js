@@ -47,8 +47,8 @@ const AppLayout = () => {
 //     // <Route errorElement={<ErrorPage />}></Route>
 //     <Route element={<AppLayout />}>
 //       <Route path="/" element={<Home />} />
-//       <Route path="adsearch" element={<AdSearchPage />} />
-//       <Route path="aduser" element={<AdUserPage />} />
+//       <Route path="ad/search" element={<AdSearchPage />} />
+//       <Route path="ad/user" element={<AdUserPage />} />
 //       <Route path="about" element={<About />} />
 //       <Route path="calid/booking" element={<CalIdBookingPage />} />
 //       <Route path="calid/bookingphoto" element={<CalIdBookingPhotoPage />} />
@@ -56,8 +56,8 @@ const AppLayout = () => {
 //       <Route path="fetchhook" element={<CustomFetchHookPage />} />
 //       <Route path="login" element={<LoginPage />} />
 //       <Route path="usercontextdisplay" element={<UserContextDisplayPage />} />
-//       <Route path="wmppersonnalinfo" element={<WmpPersonnelInfoPage />} />
-//       <Route path="wmppersonnalinfo/:id" element={<WmpPersonnelInfoDetailPage />} />
+//       <Route path="wmp/personnalinfo" element={<WmpPersonnelInfoPage />} />
+//       <Route path="wmp/personnalinfo/:id" element={<WmpPersonnelInfoDetailPage />} />
 //     </Route>
 //   )
 // );
@@ -68,8 +68,8 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { path: "/", element: <Home />, },
-      { path: "adsearch", element: <AdSearchPage />, },
-      { path: "aduser", element: <AdUserPage />, },
+      { path: "ad/search", element: <AdSearchPage />, },
+      { path: "ad/user", element: <AdUserPage />, },
       { path: "about", element: <About />, },
       { path: "calid/booking", element: <CalIdBookingPage />, },
       { path: "calid/bookingphoto", element: <CalIdBookingPhotoPage />, },
@@ -78,8 +78,8 @@ const router = createBrowserRouter([
       { path: "login", element: <LoginPage />, },
       { path: "logintoken", element: <LoginTokenPage />, },
       { path: "usercontextdisplay", element: <UserContextDisplayPage />, },
-      { path: "wmppersonnalinfo", element: <WmpPersonnelInfoPage />, },
-      { path: "wmppersonnalinfo/:id", element: <WmpPersonnelInfoDetailPage />, },
+      { path: "wmp/personnalinfo", element: <WmpPersonnelInfoPage />, },
+      { path: "wmp/personnalinfo/:id", element: <WmpPersonnelInfoDetailPage />, },
     ]
   }
 ]);

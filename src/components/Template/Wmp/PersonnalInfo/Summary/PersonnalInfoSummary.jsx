@@ -31,7 +31,7 @@ function PersonnalInfoSummary(prop) {
   }, [prop.records]);
 
   const onDetail = (id) => {
-    navigate(`/wmppersonnalinfo/${id}`, { state: { records: records, scrollPosition } })
+    navigate(`/wmp/personnalinfo/${id}`, { state: { records: records, scrollPosition } })
   }
 
   const onScroll = (e) => {

@@ -43,7 +43,7 @@ function PersonnalInfoDetail() {
           })
         }
       </Container>
-      <Button className="mt-3" size="sm" type="button" onClick={(e) => navigate('/wmppersonnalinfo', {state: location.state})}>Back</Button>
+      <Button className="mt-3" size="sm" type="button" onClick={(e) => navigate('/wmp/personnalinfo', {state: location.state})}>Back</Button>
     </Container>
   )
 }
